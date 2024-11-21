@@ -11,6 +11,9 @@ string的基本使用
 base16算法的编解码转换
 5、testwhile
 模拟命令执行操作
+6、test_base16_func
+用函数的方式封装base16算法
+
 
 问题说明：
 1、
