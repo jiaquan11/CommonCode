@@ -26,9 +26,10 @@ int main() {
         base16str += base16_enc_tab[l];
     }
     cout << "base16编码结果：" << base16str << endl;
-
+ 
     //base16解码
     string ostr;
+	//ASCII字符
     const vector<char> base16_dec_tab = {
 		-1, -1, -1, -1, -1, -1, -1, -1, -1, -1,//0~9
         -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,//10~19
