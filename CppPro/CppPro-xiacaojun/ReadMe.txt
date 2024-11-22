@@ -13,6 +13,12 @@ base16算法的编解码转换
 模拟命令执行操作
 6、test_base16_func
 用函数的方式封装base16算法
+7、testpointandref
+指针和引用的区分说明
+8、test_cout_cin
+输入输出的部分用法
+9、streamlog
+输入输出实例-日志模块
 
 
 问题说明：

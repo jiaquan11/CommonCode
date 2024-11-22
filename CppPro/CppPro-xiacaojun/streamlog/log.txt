@@ -1,0 +1,10 @@
+2024-11-22 11:58:55 debug test log 004 ofstream D:\study\computerStudy\personcode\CommonCode\CppPro\CppPro-xiacaojun\streamlog\streamlog.cpp:63
+2024-11-22 11:58:55 debug test log 005 ofstream D:\study\computerStudy\personcode\CommonCode\CppPro\CppPro-xiacaojun\streamlog\streamlog.cpp:64
+2024-11-22 11:59:23 debug test log 004 ofstream D:\study\computerStudy\personcode\CommonCode\CppPro\CppPro-xiacaojun\streamlog\streamlog.cpp:63
+2024-11-22 11:59:23 debug test log 005 ofstream D:\study\computerStudy\personcode\CommonCode\CppPro\CppPro-xiacaojun\streamlog\streamlog.cpp:64
+2024-11-22 12:27:25 debug test log 004 ofstream D:\study\computerStudy\personcode\CommonCode\CppPro\CppPro-xiacaojun\streamlog\streamlog.cpp:63
+2024-11-22 12:27:25 debug test log 005 ofstream D:\study\computerStudy\personcode\CommonCode\CppPro\CppPro-xiacaojun\streamlog\streamlog.cpp:64
+2024-11-22 13:20:28 debug test log 004 ofstream D:\study\computerStudy\personcode\CommonCode\CppPro\CppPro-xiacaojun\streamlog\streamlog.cpp:63
+2024-11-22 13:20:28 debug test log 005 ofstream D:\study\computerStudy\personcode\CommonCode\CppPro\CppPro-xiacaojun\streamlog\streamlog.cpp:64
+2024-11-22 13:24:50 debug test log 004 ofstream D:\study\computerStudy\personcode\CommonCode\CppPro\CppPro-xiacaojun\streamlog\streamlog.cpp:64
+2024-11-22 13:24:50 debug test log 005 ofstream D:\study\computerStudy\personcode\CommonCode\CppPro\CppPro-xiacaojun\streamlog\streamlog.cpp:65
