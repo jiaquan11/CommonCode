@@ -2,6 +2,10 @@
 
 void Logger::Write(XLog level, const std::string& log,
 				   const std::string& file, int line) {
+	if (!format_ || !output_) {
+		return;
+	}
+	
 	if (level < log_level_) {
 		return;
 	}

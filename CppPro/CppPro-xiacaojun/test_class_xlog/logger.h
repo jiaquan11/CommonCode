@@ -2,6 +2,7 @@
 #include <string>
 #include "log_format.h"
 #include "log_output.h"
+#include <memory>
 
 //日志级别
 enum class XLog {
@@ -17,10 +18,10 @@ enum class XLog {
 class Logger {
 public:
 	~Logger() {
-		delete format_;
+		/*delete format_;
 		format_ = nullptr;
 		delete output_;
-		output_ = nullptr;
+		output_ = nullptr;*/
 	}
 
 public:
@@ -28,12 +29,12 @@ public:
 	void Write(XLog level, const std::string& log,
 			   const std::string& file, int line);
 
-	void SetOutput(LogOutput* output) {
-		output_ = output;
+	void SetOutput(std::unique_ptr<LogOutput> output) {
+		output_ = move(output);
 	}
 
-	void SetFormat(LogFormat* format) {
-		format_ = format;
+	void SetFormat(std::unique_ptr<LogFormat> format) {
+		format_ = move(format);
 	}
 
 	void SetLevel(XLog level) {
@@ -42,10 +43,11 @@ public:
 
 private:
 	//日志格式化
-	LogFormat* format_{ nullptr };
+	//LogFormat* format_{ nullptr };
 	//日志输出
-	LogOutput* output_{ nullptr };
-
+	//LogOutput* output_{ nullptr };
+	std::unique_ptr<LogFormat> format_;
+	std::unique_ptr<LogOutput> output_;
 	//最低日志级别
 	XLog log_level_{ XLog::DEBUG };
 };
