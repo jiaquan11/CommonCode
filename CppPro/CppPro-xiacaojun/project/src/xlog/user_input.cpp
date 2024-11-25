@@ -18,7 +18,7 @@ static vector<string> Split(const string& s) {
 	return vec;
 }
 
-void UserInput::Start(std::function<void()>init) {
+void UserInput::Start(std::function<void(std::vector<std::string>)>init) {
 	cout << "UserInput::Start()" << endl;
 	//接收用户的输入
 	while (!is_exit) {
@@ -38,11 +38,11 @@ void UserInput::Start(std::function<void()>init) {
 		}*/
 		//cout << input << endl;
 		//cv -s test.mp4 -d test.avi
-		//初始化任务
-		init();
+		//1初始化任务
+		init(vec);
 
 		string type = vec[0];
-		//初始化任务
+		//2参数处理
 		for (int i = 1; i < vec.size(); i++) {
 			//判断是否是关键字 -s -d
 			//-s test.mp4 -p -d out.mp4
@@ -62,7 +62,7 @@ void UserInput::Start(std::function<void()>init) {
 				cout << k << ":" << " " << endl;
 			}
 		}
-		//执行任务
+		//3执行任务
 		auto task = task_funcs_.find(type);
 		if (task == task_funcs_.end()) {
 			cout << type << " not support" << endl;

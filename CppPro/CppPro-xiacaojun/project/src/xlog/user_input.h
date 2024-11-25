@@ -4,11 +4,12 @@
 #include <map>
 #include <string>
 #include <functional>
+#include <vector>
 
 class XLOG_API UserInput{
 public:
 	//启动控制台任务获取用户输入
-	void Start(std::function<void()>init = [] {});
+	void Start(std::function<void(std::vector<std::string>)>init = [] (std::vector<std::string>){});
 	void Stop() {
 		is_exit = true;
 	}
