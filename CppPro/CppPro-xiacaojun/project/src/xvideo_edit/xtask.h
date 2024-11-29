@@ -21,4 +21,6 @@ public:
 	virtual bool Running() = 0;
 	//视频总时长（秒）
 	virtual int TotalSec() = 0;
+
+	virtual void Clear() = 0;
 };

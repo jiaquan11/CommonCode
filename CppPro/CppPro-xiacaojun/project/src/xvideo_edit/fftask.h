@@ -15,8 +15,11 @@ class FFTask : public XTask {
 	}
 	int TotalSec() override {
 		return total_sec_;
-	};
-
+	}
+	void Clear() {
+		total_sec_ = 0;
+		progress_ = 0;
+	}
 private:
 	int total_sec_{ 0 };//视频总时长
 	int progress_{ 0 };//处理进度

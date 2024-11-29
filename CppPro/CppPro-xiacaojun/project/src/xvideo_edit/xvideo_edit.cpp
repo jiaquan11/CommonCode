@@ -1,8 +1,18 @@
 ﻿#include <iostream>
 #include "xtask_factory.h"
 #include "xvideo_input.h"
+#include "xdir.h"
 
 int main() {
+	/*{
+		XDir d;
+		auto files = d.GetFiles(".");
+		for (auto& f:files) {
+			std::cout << f.name << std::endl;
+		}
+	}
+	system("pause");*/
+
 	XVideoInput input;
 	input.Start(XTaskFactory::Create());
 	/*auto task = XTaskFactory::Create();

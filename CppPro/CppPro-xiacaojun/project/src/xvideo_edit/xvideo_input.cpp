@@ -1,8 +1,24 @@
 #include "xvideo_input.h"
 #include <iostream>
 #include "user_input.h"
+#include "xdir.h"
 
 using namespace std;
+void XVideoInput::RunTask(XTask& task, const XTask::Data& data) {
+	task.Start(data);
+	//等待任务结束，显示进度
+	int p = 0;
+	int l = -1;
+	while (task.Running()) {
+		p = task.Progress();
+		if (p != l) {
+			cout << "\r%" << task.Progress();
+			l = p;
+		}
+	}
+	cout << "\r%" << "100" << endl;
+}
+
 void XVideoInput::Start(std::unique_ptr<XTask> task) {
 	cout << __FUNCSIG__ << endl;
 	UserInput user;
@@ -16,18 +32,24 @@ void XVideoInput::Start(std::unique_ptr<XTask> task) {
 		cout << "cv task" << endl;
 		cout << data.src << " " << data.des << endl;
 		data.type = "cv";
-		task->Start(data);
-		//等待任务结束，显示进度
-		int p = 0;
-		int l = -1;
-		while (task->Running()) {
-			p = task->Progress();
-			if (p != l) {
-				cout << "\r%" << task->Progress();
-				l = p;
+		task->Clear();
+
+		if (XDir::IsDir(data.src)) {
+			XDir dir;
+			auto files = dir.GetFiles(data.src);
+			for (auto f:files) {
+				XTask::Data d = data;
+				d.src = f.path;
+				if (!XDir::IsDir(data.des)) {
+					XDir::Create(data.des);
+				}
+				d.des = data.des + "/" + f.name;
+				task->Clear();
+				RunTask(*task, d);
 			}
+		} else {
+			RunTask(*task, data);
 		}
-		cout << "\r%" << "100" << endl;
 	})
 	.Reg("-s", [&](const string& s) {//源文件
 		cout << "-s: " << s << endl;
@@ -67,6 +89,8 @@ void XVideoInput::Start(std::unique_ptr<XTask> task) {
 
 	user.Start([&](vector<string> para) {
 		cout << "init task" << endl;
+		task->Clear();
+
 		data = XTask::Data();
 		//play test.mp4
 		//cv test.mp4 out.mp4

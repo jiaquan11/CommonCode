@@ -6,5 +6,8 @@ class XVideoInput {
 public:
 	//开始接收用户输入，并调用task执行任务
 	void Start(std::unique_ptr<XTask> task);
+
+private:
+	void RunTask(XTask& task, const XTask::Data& data);
 };
 
