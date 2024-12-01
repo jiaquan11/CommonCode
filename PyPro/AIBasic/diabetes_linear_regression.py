@@ -37,5 +37,7 @@ y_pred_train = lr.predict(X_train)
 y_pred_test = lr.predict(X_test)
 
 #打印模型的均方误差
+#mean_squared_error：从sklearn.metrics中导入的函数，用于计算均方误差（MSE）
+#MSE反映了预测值与真实值之间的平均平方误差，值越小表示模型性能越好
 print("均方误差: %0.2f" % mean_squared_error(y_train, y_pred_train))
 print("均方误差: %0.2f" % mean_squared_error(y_test, y_pred_test))
