@@ -6,5 +6,7 @@
 使用逻辑回归模型 对鸢尾花数据集进行分类，并评估模型的准确率
 3、20newsgroups_logistic_regression.py
 使用逻辑回归模型 对20newsgroups数据集进行分类，并评估模型的准确率
+4、hello_CountVectorizer.py
+使用 CountVectorizer 将文本数据（corpus）转换为 词频矩阵
 
 问题处理:
