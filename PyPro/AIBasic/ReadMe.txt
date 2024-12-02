@@ -4,6 +4,7 @@
 这段代码实现了一个简单的多元线性回归模型，用于预测糖尿病数据集中的目标值（y）
 2、iris_logistic_regression.py
 使用逻辑回归模型 对鸢尾花数据集进行分类，并评估模型的准确率
-
+3、20newsgroups_logistic_regression.py
+使用逻辑回归模型 对20newsgroups数据集进行分类，并评估模型的准确率
 
 问题处理:
