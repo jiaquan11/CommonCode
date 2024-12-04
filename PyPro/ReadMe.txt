@@ -1,5 +1,5 @@
-【2024最新版】人工智能零基础入门教程！（理论+实战）39讲全
-代码demo
+一、【2024最新版】人工智能零基础入门教程！（理论+实战）39讲全
+AIBasic
 1、diabetes_linear_regression.py
 这段代码实现了一个简单的多元线性回归模型，用于预测糖尿病数据集中的目标值（y）
 2、iris_logistic_regression.py
@@ -15,5 +15,8 @@
 7、speaker_features.py  test_speaker.py train_models.py
 使用高斯混合模型对提取的音频特征信息进行建模训练并测试识别
 
+PyTorch_Study
+1、mnist_dnn.py
+使用 PyTorch 框架实现的简单深度神经网络，用于对 MNIST 数据集进行手写数字识别
 
 问题处理:
