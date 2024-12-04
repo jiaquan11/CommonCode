@@ -12,6 +12,8 @@
 使用 逻辑回归模型 对 MNIST 手写数字数据集 进行分类，并评估模型的准确率
 6、KMeans_implement.py
 使用KMeans模型对数据进行聚类
+7、speaker_features.py  test_speaker.py train_models.py
+使用高斯混合模型对提取的音频特征信息进行建模训练并测试识别
 
 
 问题处理:
