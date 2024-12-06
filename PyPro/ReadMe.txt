@@ -31,3 +31,5 @@ ai_demo
 统计分词的tokens的数量
 5、limit_token.py
 实现基于最大token数量的消息列表限制带会话长度管理的控制台循环聊天
+6、test_chatbot_app.py
+使用streamlit生成一个网页
