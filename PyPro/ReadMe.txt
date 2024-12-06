@@ -19,4 +19,15 @@ PyTorch_Study
 1、mnist_dnn.py
 使用 PyTorch 框架实现的简单深度神经网络，用于对 MNIST 数据集进行手写数字识别
 
-问题处理:
+二、目前B站最全最细的AI大模型全套教程，2024最新版，包含所有干货
+ai_demo
+1、openai_test.py
+使用openai模型简洁控制台用户循环交互示例
+2、json_mode.py
+使用json格式显示回复
+3、seed.py
+使用种子，可以确保每次请求回复的格式相同
+4、count_token.py
+统计分词的tokens的数量
+5、limit_token.py
+实现基于最大token数量的消息列表限制带会话长度管理的控制台循环聊天
