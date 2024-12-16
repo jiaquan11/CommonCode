@@ -52,11 +52,9 @@ int main(int argc, char* argv[]) {
 		     string levelStr = "debug";
 		     if (LogLevel::INFO == level) {
 			     levelStr = "info";
-		     }
-		     else if (LogLevel::ERROR == level) {
+		     } else if (LogLevel::ERROR == level) {
 			     levelStr = "error";
-		     }
-		     else if (LogLevel::FATAL == level) {
+		     } else if (LogLevel::FATAL == level) {
 			     levelStr = "fatal";
 		     }
 		     cout << levelStr + ":" << context << endl;
@@ -71,11 +69,9 @@ int main(int argc, char* argv[]) {
 			string levelStr = "debug";
 			if (LogLevel::INFO == level) {
 				levelStr = "info";
-			}
-			else if (LogLevel::ERROR == level) {
+			} else if (LogLevel::ERROR == level) {
 				levelStr = "error";
-			}
-			else if (LogLevel::FATAL == level) {
+			} else if (LogLevel::FATAL == level) {
 				levelStr = "fatal";
 			}
 			cout << levelStr + ":" << context << endl;
@@ -90,11 +86,9 @@ int main(int argc, char* argv[]) {
 			string levelStr = "debug";
 			if (LogLevel::INFO == level) {
 				levelStr = "info";
-			}
-			else if (LogLevel::ERROR == level) {
+			} else if (LogLevel::ERROR == level) {
 				levelStr = "error";
-			}
-			else if (LogLevel::FATAL == level) {
+			} else if (LogLevel::FATAL == level) {
 				levelStr = "fatal";
 			}
 			cout << levelStr + ":" << context << endl;

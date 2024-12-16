@@ -22,11 +22,11 @@ int main() {
                 execcmd = "dir";
                 string arg;
                 //结尾至少还有一个\n
-                if (cin.rdbuf()->in_avail() > 1) {
-                    cin >> arg;
+                if (cin.rdbuf()->in_avail() > 1) {//表示还有数据未取，至少有一个\n及一个字符
+                    cin >> arg;//取出剩余的参数
                     execcmd += " " + arg;
 				}
-                system(execcmd.c_str());
+                system(execcmd.c_str());//调用系统命令
             }
             else if (cmd == "clear") {
                 system("cls");
